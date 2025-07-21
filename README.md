@@ -40,7 +40,7 @@ The exercises are organized into three levels of difficulty, from basic models t
 
    ```bash
    git clone https://github.com/luriguso/Task0201mysqlStructure.git
-   cd db-modeling-exercises
+   cd Task0201mysqlStructure
    ```
 
 2. Open the ER diagrams with Workbench.
