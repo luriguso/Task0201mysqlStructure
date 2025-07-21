@@ -1,7 +1,6 @@
-/*Database creation*/
-CREATE DATABASE `pizzeria`;
-
-/*Using the Database*/
+/* Database creation */
+DROP DATABASE pizzeria;
+CREATE DATABASE IF NOT EXISTS `pizzeria`;
 USE `pizzeria`;
 
 CREATE TABLE `province`(
@@ -57,7 +56,7 @@ CREATE TABLE `employee`(
     `last_name` VARCHAR(100) NOT NULL,
     `nif` VARCHAR(20) NOT NULL,
     `number_phone` VARCHAR(20) NOT NULL,
-    `title` VARCHAR(50) NOT NULL,
+    `title` ENUM('cook', 'delivery_person') NOT NULL,
     PRIMARY KEY (`id_employee`),
     FOREIGN KEY (`id_store`) REFERENCES `store` (`id_store`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
